@@ -1,7 +1,7 @@
 FROM node:22-alpine
 WORKDIR /app
 COPY package.json server.js ./
-COPY public ./public
+COPY index.html
 ENV PORT=8080 APP_VERSION=1.0.0 DATA_DIR=/tmp/data
 RUN mkdir -p /tmp/data && chown -R node:node /tmp/data /app
 USER node
